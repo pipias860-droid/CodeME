@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STRIKEPOINT — Tactical 5v5</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar"><a class="brand" href="#"><span class="brand-mark">S</span><span>STRIKE<span class="brand-accent">POINT</span></span></a><div class="nav-center"><span class="nav-active">PLAY</span><span>ARSENAL</span><span>CAREER</span></div><div class="profile"><span class="online-dot"></span><span id="profileName">GUEST OPERATOR</span><span class="profile-avatar">OP</span></div></header>
+    <main>
+      <section class="lobby" id="lobby">
+        <div class="lobby-copy"><div class="eyebrow"><span class="eyebrow-line"></span>TACTICAL 5V5 • SEASON 01</div><h1>EVERY ROUND<br><span>COUNTS.</span></h1><p class="intro">Two teams. One objective. Make every shot matter.</p>
+          <div class="mode-card"><div class="mode-icon">⌖</div><div><div class="mode-title">COMPETITIVE</div><div class="mode-sub">BOMB DEFUSAL <span>·</span> FIRST TO 13</div></div><div class="mode-tag">5V5</div></div>
+          <div class="join-form"><label for="playerName">CALLSIGN</label><input id="playerName" maxlength="16" placeholder="Enter your callsign" value="Operator"><label for="roomCode">ROOM CODE <span class="optional">(OPTIONAL)</span></label><div class="room-input"><input id="roomCode" maxlength="10" placeholder="QUICK MATCH" value="QUICK"><span>↗</span></div><button id="playBtn"><span>DEPLOY</span><b>→</b></button><div class="connection-note"><span class="online-dot"></span> <span id="serverLabel">CONNECTING TO SERVER</span></div></div>
+        </div>
+        <div class="lobby-art"><div class="art-grid"></div><div class="target-ring ring-one"></div><div class="target-ring ring-two"></div><div class="art-cross cross-a"></div><div class="art-cross cross-b"></div><div class="art-coordinates">N 42° 11' 08.2&quot;<br>E 43° 02' 19.7&quot;</div><div class="art-status"><span class="pulse"></span> LIVE OPERATIONS <span class="status-dash"></span> TBILISI, GEORGIA</div><div class="art-title">DUST<br><span>SECTOR</span><small>01 / CAUCASUS</small></div><div class="map-lines"></div><div class="map-shape shape-a"></div><div class="map-shape shape-b"></div><div class="map-shape shape-c"></div><div class="map-shape shape-d"></div><div class="map-pin pin-a">A</div><div class="map-pin pin-b">B</div><div class="art-players"><i></i><i></i><i></i><i></i><i></i><span>OPERATORS IN QUEUE</span></div><div class="art-index">SP / 001—05</div></div>
+        <div class="lobby-bottom"><span>STRIKEPOINT © 2026</span><span>BUILT FOR THE BRAVE</span><span>V. 0.9.4 <b>●</b></span></div>
+      </section>
+      <section class="game-view hidden" id="gameView">
+        <div class="match-top"><div class="match-brand"><span class="mini-mark">S</span> STRIKEPOINT <span class="separator">/</span><span id="roomLabel">ROOM QUICK</span></div><div class="match-center"><div class="team-score blue-score"><i></i><b id="blueScore">0</b></div><div class="round-clock"><strong id="clock">1:45</strong><span>ROUND <b id="roundNum">01</b></span></div><div class="team-score red-score"><b id="redScore">0</b><i></i></div></div><button class="leave-btn" id="leaveBtn">LEAVE MATCH <span>×</span></button></div>
+        <div class="arena-wrap"><canvas id="arena" width="960" height="620"></canvas><div class="map-label"><i></i> DUST SECTOR <span>COMPETITIVE</span></div><div class="spike-alert hidden" id="spikeAlert"><span class="alert-icon">!</span><span><b>SPIKE PLANTED</b><small>DEFUSE THE DEVICE</small></span><strong id="spikeClock">0:40</strong></div><div class="round-banner hidden" id="roundBanner"></div><div class="kill-feed" id="killFeed"></div><div class="spectate hidden" id="spectate">ELIMINATED <span>·</span> SPECTATING</div></div>
+        <div class="game-bottom"><div class="player-status"><div class="portrait">OP</div><div class="status-copy"><b id="hudName">OPERATOR</b><span><i></i><em id="hp">100</em> HP</span></div><div class="status-divider"></div><div class="armor">◇ <b>100</b><small>ARMOR</small></div></div><div class="controls-hint"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> MOVE</span><span><kbd>SHIFT</kbd> WALK</span><span><kbd>CLICK</kbd> FIRE</span><span><kbd>E</kbd> PLANT / DEFUSE</span></div><div class="weapon"><span class="weapon-ammo"><b id="ammo">24</b><i>/</i> <small>120</small></span><div class="rifle">╱╲━━━━━━━━━━╸</div><span class="weapon-name">VANDAL <small>RIFLE</small></span></div></div>
+        <div class="chat-log" id="chatLog"></div><form class="chat-form" id="chatForm"><input id="chatInput" maxlength="120" placeholder="Enter to chat…"><button>↵</button></form>
+      </section>
+    </main>
+  </div><script src="/client.js"></script>
+</body>
+</html>
